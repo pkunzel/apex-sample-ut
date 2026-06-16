@@ -500,10 +500,6 @@ page 1601 (
             label: Number Field
             alignment: left
         }
-        settings {
-            numberAlignment: end
-            virtualKeyboard: text
-        }
         layout {
             sequence: 40
             region: @demo

@@ -932,8 +932,20 @@ page 4000 (
             icon: fa-info-circle
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-open-region (
+            action: openRegion
+            affectedElements {
+                selectionType: region
+                region: @about-font-apex
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button reset-icon (
@@ -956,8 +968,38 @@ page 4000 (
             icon: fa-refresh
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-clear (
+            action: clear
+            affectedElements {
+                selectionType: items
+                items: [
+                    P4000_ANIMATION
+                    P4000_ROTATE
+                    P4000_MODIFIER
+                ]
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
+        triggerAction native-javascript-code (
+            action: executeJsCode
+            settings {
+                jsCode:
+                    ```javascript-browser
+                    $s('P4000_ICON_SIZE','null');
+                    apex.theme42demo.renderIconPreview();
+                    ```
+            }
+            execution {
+                sequence: 20
+            }
+        )
+
     )
 
     dynamicAction apply-modifier-to-icon (
@@ -1009,75 +1051,6 @@ page 4000 (
             action: cancelEvent
             execution {
                 sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction open-about-dialog (
-        name: Open About Dialog
-        execution {
-            sequence: 80
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @about
-        }
-
-        action native-open-region (
-            action: openRegion
-            affectedElements {
-                selectionType: region
-                region: @about-font-apex
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction reset-icon-settings (
-        name: Reset Icon Settings
-        execution {
-            sequence: 60
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @reset-icon
-        }
-
-        action native-clear (
-            action: clear
-            affectedElements {
-                selectionType: items
-                items: [
-                    P4000_ANIMATION
-                    P4000_ROTATE
-                    P4000_MODIFIER
-                ]
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-        action native-javascript-code (
-            action: executeJsCode
-            settings {
-                jsCode:
-                    ```javascript-browser
-                    $s('P4000_ICON_SIZE','null');
-                    apex.theme42demo.renderIconPreview();
-                    ```
-            }
-            execution {
-                sequence: 20
                 fireOnInit: false
             }
         )

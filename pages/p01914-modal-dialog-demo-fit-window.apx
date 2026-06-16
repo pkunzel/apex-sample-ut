@@ -74,8 +74,16 @@ page 1914 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-dialog-cancel (
+            action: cancelDialog
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button create (
@@ -94,27 +102,6 @@ page 1914 (
         behavior {
             action: definedByDynamicAction
         }
-    )
-
-    dynamicAction cancel-dialog (
-        name: Cancel Dialog
-        execution {
-            sequence: 10
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel
-        }
-
-        action native-dialog-cancel (
-            action: cancelDialog
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
     )
 
 )

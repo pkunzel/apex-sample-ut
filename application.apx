@@ -76,7 +76,6 @@ app UT (
     }
     advanced {
         passEcid: false
-        modernizeApp: true
         copyrightBanner:
             ```
             Name: #APP_NAME#

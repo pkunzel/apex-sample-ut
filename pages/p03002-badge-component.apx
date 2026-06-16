@@ -401,9 +401,6 @@ page 3002 (
         searchBar {
             includeSearchBar: false
         }
-        heading {
-            fixedTo: none
-        }
         advanced {
             savedReportMappingIdentifier: 397340642362089731
         }

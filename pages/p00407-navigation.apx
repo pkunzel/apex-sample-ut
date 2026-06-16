@@ -262,8 +262,19 @@ page 407 (
             icon: fa-external-link
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-javascript-code (
+            action: executeJsCode
+            settings {
+                jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1122:&APP_SESSION.','Mega Menu Preview');
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-preview-menu-bar (
@@ -283,8 +294,19 @@ page 407 (
             icon: fa-external-link
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-javascript-code (
+            action: executeJsCode
+            settings {
+                jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1120:&APP_SESSION.','Menu Bar Preview');
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-preview-side-tree (
@@ -304,8 +326,19 @@ page 407 (
             icon: fa-external-link
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-javascript-code (
+            action: executeJsCode
+            settings {
+                jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1123:&APP_SESSION.','Side Navigation Menu Preview');
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-preview-tabs (
@@ -325,101 +358,16 @@ page 407 (
             icon: fa-external-link
         }
         behavior {
-            action: definedByDynamicAction
-        }
-    )
-
-    dynamicAction mega-menu-preview (
-        name: Mega Menu Preview
-        execution {
-            sequence: 30
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-preview-mega-menu
+            action: triggerAction
         }
 
-        action native-javascript-code (
-            action: executeJsCode
-            settings {
-                jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1122:&APP_SESSION.','Mega Menu Preview');
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction menu-bar-preview (
-        name: Menu Bar Preview
-        execution {
-            sequence: 10
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-preview-menu-bar
-        }
-
-        action native-javascript-code (
-            action: executeJsCode
-            settings {
-                jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1120:&APP_SESSION.','Menu Bar Preview');
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction side-nav-preview (
-        name: Side Nav Preview
-        execution {
-            sequence: 50
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-preview-side-tree
-        }
-
-        action native-javascript-code (
-            action: executeJsCode
-            settings {
-                jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1123:&APP_SESSION.','Side Navigation Menu Preview');
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction tabs-preview (
-        name: Tabs Preview
-        execution {
-            sequence: 20
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-preview-tabs
-        }
-
-        action native-javascript-code (
+        triggerAction native-javascript-code (
             action: executeJsCode
             settings {
                 jsCode: apex.theme42demo.openSamplePage('f?p=&APP_ID.:1121:&APP_SESSION.','Tabs Preview');
             }
             execution {
                 sequence: 10
-                fireOnInit: false
             }
         )
 

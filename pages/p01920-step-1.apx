@@ -85,8 +85,16 @@ page 1920 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-dialog-cancel (
+            action: cancelDialog
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button next (
@@ -109,27 +117,6 @@ page 1920 (
         behavior {
             warnOnUnsavedChanges: doNotCheck
         }
-    )
-
-    dynamicAction cancel-dialog (
-        name: Cancel Dialog
-        execution {
-            sequence: 10
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel
-        }
-
-        action native-dialog-cancel (
-            action: cancelDialog
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
     )
 
     branch (

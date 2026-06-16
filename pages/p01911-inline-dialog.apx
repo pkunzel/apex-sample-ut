@@ -289,8 +289,20 @@ page 1911 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-open-region (
+            action: openRegion
+            affectedElements {
+                selectionType: region
+                region: @auto-height
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-fixed (
@@ -311,8 +323,20 @@ page 1911 (
             ]
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-open-region (
+            action: openRegion
+            affectedElements {
+                selectionType: region
+                region: @fixed-height
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     dynamicAction close-auto-height-dialog (
@@ -353,56 +377,6 @@ page 1911 (
 
         action native-close-region (
             action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @fixed-height
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction open-auto-height-dialog (
-        name: Open Auto Height Dialog
-        execution {
-            sequence: 10
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-auto-size
-        }
-
-        action native-open-region (
-            action: openRegion
-            affectedElements {
-                selectionType: region
-                region: @auto-height
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction open-fixed-height-dialog (
-        name: Open Fixed Height Dialog
-        execution {
-            sequence: 20
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-fixed
-        }
-
-        action native-open-region (
-            action: openRegion
             affectedElements {
                 selectionType: region
                 region: @fixed-height

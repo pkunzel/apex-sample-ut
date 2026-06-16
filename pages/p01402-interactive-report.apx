@@ -160,8 +160,12 @@ page 1402 (
         performance {
             maxRowsToProcess: 1000000
         }
-        heading {
-            fixedTo: none
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
         }
         componentAdvanced {
             maxRowsPerPageInSelector: 6
@@ -380,8 +384,12 @@ page 1402 (
         performance {
             maxRowsToProcess: 1000000
         }
-        heading {
-            fixedTo: none
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
         }
         componentAdvanced {
             maxRowsPerPageInSelector: 6

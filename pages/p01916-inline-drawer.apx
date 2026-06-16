@@ -176,8 +176,20 @@ page 1916 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @auto-width
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button cancel-2 (
@@ -193,8 +205,20 @@ page 1916 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @fixed-width
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button ok (
@@ -211,8 +235,20 @@ page 1916 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @fixed-width
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button ok-2 (
@@ -229,8 +265,20 @@ page 1916 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @auto-width
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-auto-size (
@@ -274,106 +322,6 @@ page 1916 (
             targetUrl: javascript:openModal('drawer_fixed')
             warnOnUnsavedChanges: doNotCheck
         }
-    )
-
-    dynamicAction close-auto-width-drawer (
-        name: Close Auto Width Drawer
-        execution {
-            sequence: 10
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @auto-width
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-auto-width-drawer-2 (
-        name: Close Auto Width Drawer_1
-        execution {
-            sequence: 30
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @ok-2
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @auto-width
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-fixed-width-drawer (
-        name: Close Fixed Width Drawer
-        execution {
-            sequence: 20
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel-2
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @fixed-width
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-fixed-width-drawer-2 (
-        name: Close Fixed Width Drawer_1
-        execution {
-            sequence: 40
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @ok
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @fixed-width
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
     )
 
 )

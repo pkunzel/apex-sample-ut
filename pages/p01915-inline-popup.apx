@@ -221,8 +221,20 @@ page 1915 (
             cssClasses: js-close-button
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @auto-height-popup
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button cancel-2 (
@@ -239,8 +251,20 @@ page 1915 (
             cssClasses: js-close-button
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @fixed-height-popup
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button ok (
@@ -258,8 +282,20 @@ page 1915 (
             cssClasses: js-close-button
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @auto-height-popup
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button ok-2 (
@@ -277,8 +313,20 @@ page 1915 (
             cssClasses: js-close-button
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @fixed-height-popup
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button ok-3 (
@@ -296,8 +344,20 @@ page 1915 (
             cssClasses: js-close-button
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @popup-with-callout
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-auto-size (
@@ -313,8 +373,20 @@ page 1915 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
+
+        triggerAction native-open-region (
+            action: openRegion
+            affectedElements {
+                selectionType: region
+                region: @auto-height-popup
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-callout (
@@ -335,11 +407,23 @@ page 1915 (
             ]
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
         }
         advanced {
             htmlDomId: btn_popup_callout
         }
+
+        triggerAction native-open-region (
+            action: openRegion
+            affectedElements {
+                selectionType: region
+                region: @popup-with-callout
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button open-fixed (
@@ -360,172 +444,10 @@ page 1915 (
             ]
         }
         behavior {
-            action: definedByDynamicAction
-        }
-    )
-
-    dynamicAction close-auto-height-popup-on-cancel (
-        name: Close Auto Height Popup on Cancel
-        execution {
-            sequence: 30
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel
+            action: triggerAction
         }
 
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @auto-height-popup
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-auto-height-popup-on-ok (
-        name: Close Auto Height Popup on Ok
-        execution {
-            sequence: 40
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @ok
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @auto-height-popup
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-callout-popup (
-        name: Close Callout Popup
-        execution {
-            sequence: 80
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @ok-3
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @popup-with-callout
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-fixed-popup-on-cancel (
-        name: Close Fixed Popup on Cancel
-        execution {
-            sequence: 50
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel-2
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @fixed-height-popup
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction close-fixed-popup-on-ok (
-        name: Close Fixed Popup on Ok
-        execution {
-            sequence: 60
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @ok-2
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @fixed-height-popup
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction open-auto-size-popup (
-        name: Open Auto Size Popup
-        execution {
-            sequence: 10
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-auto-size
-        }
-
-        action native-open-region (
-            action: openRegion
-            affectedElements {
-                selectionType: region
-                region: @auto-height-popup
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction open-fixed-popup (
-        name: Open Fixed Popup
-        execution {
-            sequence: 20
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-fixed
-        }
-
-        action native-open-region (
+        triggerAction native-open-region (
             action: openRegion
             affectedElements {
                 selectionType: region
@@ -533,32 +455,6 @@ page 1915 (
             }
             execution {
                 sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction open-inline-popup-with-callout (
-        name: Open Inline Popup with Callout
-        execution {
-            sequence: 70
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @open-callout
-        }
-
-        action native-open-region (
-            action: openRegion
-            affectedElements {
-                selectionType: region
-                region: @popup-with-callout
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
             }
         )
 
