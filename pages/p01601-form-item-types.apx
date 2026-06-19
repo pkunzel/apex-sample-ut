@@ -208,7 +208,8 @@ page 1601 (
             alignment: left
         }
         lov {
-            type: staticValues
+            type: sharedComponent
+            lov: @static-display-return-1-2
         }
         layout {
             sequence: 160
@@ -255,7 +256,8 @@ page 1601 (
             manualEntriesItem: P1601_COMBO_BOX_MANUAL_ENTRIES
         }
         lov {
-            type: staticValues
+            type: sharedComponent
+            lov: @static-display-return-1-2
         }
         layout {
             sequence: 200
@@ -455,8 +457,8 @@ page 1601 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Display1;Return1,Display2;Return2,Display3;Return3,Display4;Return4
+            type: sharedComponent
+            lov: @static-display-retun-1-4
         }
         layout {
             sequence: 340
@@ -565,7 +567,8 @@ page 1601 (
             alignment: left
         }
         lov {
-            type: staticValues
+            type: sharedComponent
+            lov: @static-display-return-1-2
         }
         layout {
             sequence: 230
@@ -615,7 +618,8 @@ page 1601 (
             alignment: left
         }
         lov {
-            type: staticValues
+            type: sharedComponent
+            lov: @static-display-return-1-2
             displayExtraValues: false
             displayNullValue: false
         }
@@ -642,7 +646,8 @@ page 1601 (
             noOfCols: 2
         }
         lov {
-            type: staticValues
+            type: sharedComponent
+            lov: @static-display-return-1-2
             displayExtraValues: false
             displayNullValue: false
         }
@@ -670,7 +675,8 @@ page 1601 (
             alignment: left
         }
         lov {
-            type: staticValues
+            type: sharedComponent
+            lov: @static-display-return-1-2
         }
         layout {
             sequence: 220
@@ -697,8 +703,8 @@ page 1601 (
             infiniteScroll: false
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Apple;APPLE,Orange;ORANGE,Pear;PEAR,Banana;BANANA,Watermelon;WATERMELON
+            type: sharedComponent
+            lov: @static-fruits
         }
         layout {
             sequence: 190
@@ -725,8 +731,8 @@ page 1601 (
             infiniteScroll: false
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Apple;APPLE,Orange;ORANGE,Pear;PEAR,Banana;BANANA,Watermelon;WATERMELON
+            type: sharedComponent
+            lov: @static-fruits
         }
         layout {
             sequence: 180
@@ -749,8 +755,8 @@ page 1601 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Display1;Return1,Display2;Return2,Display3;Return3,Display4;Return4
+            type: sharedComponent
+            lov: @static-display-retun-1-4
         }
         layout {
             sequence: 330

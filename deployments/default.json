@@ -2,7 +2,8 @@
   "app" : {
     "id" : 39528,
     "runtime" : {
-      "logging" : false
+      "logging" : false,
+      "debugging" : true
     }
   }
 }

@@ -1,5 +1,5 @@
-app UT (
-    name: Universal Theme 26.1 Reference
+app CUSTOM-UT (
+    name: Custom Universal Theme
     version: 26.1.0
     group: @universal-theme
     logo {
@@ -87,6 +87,12 @@ app UT (
     comments {
         comments: Created 08/12/2004 11:25:08 AM
     }
+
+    substitution APP_NAME (
+        value {
+            staticValue: Custom Universal Theme
+        }
+    )
 
     pwaShortcut components (
         name: Components
