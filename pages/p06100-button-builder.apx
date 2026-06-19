@@ -363,8 +363,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC:Default;default,First Button;t-Button--pillStart,Inner Button;t-Button--pill,Last Button;t-Button--pillEnd
+            type: sharedComponent
+            lov: @p6100-button-set
             displayExtraValues: false
             displayNullValue: false
         }
@@ -398,8 +398,8 @@ page 6100 (
             noOfCols: 3
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Text;TEXT_ONLY,Text with Icon;TEXT_W_ICON,Icon;ICON_ONLY
+            type: sharedComponent
+            lov: @p6100-button-template
             displayExtraValues: false
             displayNullValue: false
         }
@@ -433,8 +433,8 @@ page 6100 (
             noOfCols: 2
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Yes;t-Button--hot,No;default
+            type: sharedComponent
+            lov: @p6100-hot
             displayExtraValues: false
             displayNullValue: false
         }
@@ -495,8 +495,8 @@ page 6100 (
             noOfCols: 2
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Left;t-Button--iconLeft,Right;t-Button--iconRight
+            type: sharedComponent
+            lov: @p6100-icon-position
             displayExtraValues: false
             displayNullValue: false
         }
@@ -554,8 +554,8 @@ page 6100 (
             noOfCols: 4
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Tiny;t-Button--tiny,Small;t-Button--small,Default;default,Large;t-Button--large
+            type: sharedComponent
+            lov: @p6100-size
             displayExtraValues: false
             displayNullValue: false
         }
@@ -589,8 +589,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Small;t-Button--padBottom,Default;default,Large;t-Button--gapBottom
+            type: sharedComponent
+            lov: @p6100-spacing-bottom
             displayExtraValues: false
             displayNullValue: false
         }
@@ -621,8 +621,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Small;t-Button--padleft,Default;default,Large;t-Button--gapLeft
+            type: sharedComponent
+            lov: @p6100-spacing-left
             displayExtraValues: false
             displayNullValue: false
         }
@@ -653,8 +653,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Small;t-Button--padRight,Default;default,Large;t-Button--gapRight
+            type: sharedComponent
+            lov: @p6100-spacing-right
             displayExtraValues: false
             displayNullValue: false
         }
@@ -685,8 +685,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Small;t-Button--padTop,Default;default,Large;t-Button--gapTop
+            type: sharedComponent
+            lov: @p6100-spacing-top
             displayExtraValues: false
             displayNullValue: false
         }
@@ -717,8 +717,8 @@ page 6100 (
             noOfCols: 4
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Default;default,Simple;t-Button--simple,Remove UI Decorations;t-Button--noUI,Display as Link;t-Button--link
+            type: sharedComponent
+            lov: @p6100-style
             displayExtraValues: false
             displayNullValue: false
         }
@@ -749,8 +749,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Normal;default,Primary;t-Button--primary,Warning;t-Button--warning,Danger;t-Button--danger,Success;t-Button--success
+            type: sharedComponent
+            lov: @p6100-type
             displayExtraValues: false
             displayNullValue: false
         }
@@ -781,8 +781,8 @@ page 6100 (
             noOfCols: 6
         }
         lov {
-            type: staticValues
-            staticValues: STATIC:Auto - Default;default,Stretch;t-Button--stretch
+            type: sharedComponent
+            lov: @static-default-strecth
             displayExtraValues: false
             displayNullValue: false
         }

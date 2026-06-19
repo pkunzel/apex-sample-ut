@@ -138,8 +138,8 @@ page 1411 (
                 label: Budget
             }
             lov {
-                type: staticValues
-                staticValues: STATIC2:<120;|120,120 - 300;120|300,300 - 1#G#000;300|1000,1#G#000 - 2#G#000;1000|2000,>=2#G#000;2000|
+                type: sharedComponent
+                lov: @p1411-budget
             }
             layout {
                 sequence: 60
@@ -159,8 +159,8 @@ page 1411 (
                 label: Cost
             }
             lov {
-                type: staticValues
-                staticValues: STATIC2:<100;|100,100 - 200;100|200,200 - 1#G#000;200|1000,>=1#G#000;1000|
+                type: sharedComponent
+                lov: @p1411-cost
             }
             layout {
                 sequence: 50

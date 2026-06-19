@@ -642,8 +642,8 @@ page 4000 (
             noOfCols: 2
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Small;SMALL,Large;LARGE
+            type: sharedComponent
+            lov: @static-small-large
             displayExtraValues: false
             displayNullValue: false
         }
@@ -688,8 +688,8 @@ page 4000 (
             noOfCols: 5
         }
         lov {
-            type: staticValues
-            staticValues: STATIC:1x;null,2x;fa-2x,3x;fa-3x,4x;fa-4x,5x;fa-5x
+            type: sharedComponent
+            lov: @p4000-icon-size
             displayExtraValues: false
             displayNullValue: false
         }
@@ -723,36 +723,8 @@ page 4000 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues:
-                ```
-                STATIC2:
-                25 Percent;fam-25-percent,
-                50 Percent;fam-50-percent,
-                75 Percent;fam-75-percent,
-                100 Percent;fam-100-percent,
-                Arrow Down;fam-arrow-down,
-                Arrow Left;fam-arrow-left,
-                Arrow Right;fam-arrow-right,
-                Arrow Up;fam-arrow-up,
-                Blank;fam-blank,
-                Check;fam-check,
-                Circle;fam-circle,
-                Clock;fam-clock,
-                Ellipsis H;fam-ellipsis-h,
-                Ellipsis V;fam-ellipsis-v,
-                Heart;fam-heart,
-                Information;fam-information,
-                Minus;fam-minus,
-                Pause;fam-pause,
-                Play;fam-play,
-                Plus;fam-plus,
-                Sleep;fam-sleep,
-                Star;fam-star,
-                Stop;fam-stop,
-                Warning;fam-warning,
-                X;fam-x
-                ```
+            type: sharedComponent
+            lov: @p4000-modifier
             displayExtraValues: false
             nullDisplayValue: None
         }
@@ -780,16 +752,8 @@ page 4000 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues:
-                ```
-                STATIC2:
-                Success;fam-is-success,
-                Warning;fam-is-warning,
-                Danger;fam-is-danger,
-                Info;fam-is-info,
-                Disabled;fam-is-disabled
-                ```
+            type: sharedComponent
+            lov: @p4000-modifier-status
             displayExtraValues: false
             displayNullValue: false
         }
@@ -821,8 +785,8 @@ page 4000 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues: STATIC:Rotate 90;fa-rotate-90,Rotate 180;fa-rotate-180,Rotate 270;fa-rotate-270,Flip Horizontal;fa-flip-horizontal,Flip Vertical;fa-flip-vertical
+            type: sharedComponent
+            lov: @p4000-rotate
             displayExtraValues: false
             nullDisplayValue: Normal
         }
@@ -885,8 +849,8 @@ page 4000 (
             noOfCols: 2
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Small;SMALL,Large;LARGE
+            type: sharedComponent
+            lov: @static-small-large
             displayExtraValues: false
             displayNullValue: false
         }

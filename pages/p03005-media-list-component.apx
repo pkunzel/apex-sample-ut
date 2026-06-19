@@ -358,8 +358,8 @@ page 3005 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues: STATIC2:Task;TASK_NAME,Project;PROJ_NAME,Status;STATUS
+            type: sharedComponent
+            lov: @p3005-order-by
             displayExtraValues: false
             displayNullValue: false
         }

@@ -48,6 +48,832 @@ lov font-animations (
 
 )
 
+lov p1411-budget (
+    name: P1411_BUDGET
+    source {
+        location: staticValues
+    }
+
+    entry 1000-2000 (
+        sequence: 40
+        display: 1#G#000 - 2#G#000
+        return: 1000|2000
+    )
+
+    entry 120 (
+        sequence: 10
+        display: <120
+        return: |120
+    )
+
+    entry 120-300 (
+        sequence: 20
+        display: 120 - 300
+        return: 120|300
+    )
+
+    entry 2000 (
+        sequence: 50
+        display: >=2#G#000
+        return: 2000|
+    )
+
+    entry 300-1000 (
+        sequence: 30
+        display: 300 - 1#G#000
+        return: 300|1000
+    )
+
+)
+
+lov p1411-cost (
+    name: P1411_COST
+    source {
+        location: staticValues
+    }
+
+    entry 100 (
+        sequence: 10
+        display: <100
+        return: |100
+    )
+
+    entry 100-200 (
+        sequence: 20
+        display: 100 - 200
+        return: 100|200
+    )
+
+    entry 1000 (
+        sequence: 40
+        display: >=1#G#000
+        return: 1000|
+    )
+
+    entry 200-1000 (
+        sequence: 30
+        display: 200 - 1#G#000
+        return: 200|1000
+    )
+
+)
+
+lov p3005-order-by (
+    name: P3005_ORDER_BY
+    source {
+        location: staticValues
+    }
+
+    entry proj-name (
+        sequence: 20
+        display: Project
+        return: PROJ_NAME
+    )
+
+    entry status (
+        sequence: 30
+        display: Status
+        return: STATUS
+    )
+
+    entry task-name (
+        sequence: 10
+        display: Task
+        return: TASK_NAME
+    )
+
+)
+
+lov p4000-icon-size (
+    name: P4000_ICON_SIZE
+    source {
+        location: staticValues
+    }
+
+    entry fa-2x (
+        sequence: 20
+        display: 2x
+        return: fa-2x
+    )
+
+    entry fa-3x (
+        sequence: 30
+        display: 3x
+        return: fa-3x
+    )
+
+    entry fa-4x (
+        sequence: 40
+        display: 4x
+        return: fa-4x
+    )
+
+    entry fa-5x (
+        sequence: 50
+        display: 5x
+        return: fa-5x
+    )
+
+    entry null (
+        sequence: 10
+        display: 1x
+        return: null
+    )
+
+)
+
+lov p4000-modifier (
+    name: P4000_MODIFIER
+    source {
+        location: staticValues
+    }
+
+    entry fam-100-percent (
+        sequence: 40
+        display:
+            ```
+            
+            100 Percent
+            ```
+        return: fam-100-percent
+    )
+
+    entry fam-25-percent (
+        sequence: 10
+        display:
+            ```
+            
+            25 Percent
+            ```
+        return: fam-25-percent
+    )
+
+    entry fam-50-percent (
+        sequence: 20
+        display:
+            ```
+            
+            50 Percent
+            ```
+        return: fam-50-percent
+    )
+
+    entry fam-75-percent (
+        sequence: 30
+        display:
+            ```
+            
+            75 Percent
+            ```
+        return: fam-75-percent
+    )
+
+    entry fam-arrow-down (
+        sequence: 50
+        display:
+            ```
+            
+            Arrow Down
+            ```
+        return: fam-arrow-down
+    )
+
+    entry fam-arrow-left (
+        sequence: 60
+        display:
+            ```
+            
+            Arrow Left
+            ```
+        return: fam-arrow-left
+    )
+
+    entry fam-arrow-right (
+        sequence: 70
+        display:
+            ```
+            
+            Arrow Right
+            ```
+        return: fam-arrow-right
+    )
+
+    entry fam-arrow-up (
+        sequence: 80
+        display:
+            ```
+            
+            Arrow Up
+            ```
+        return: fam-arrow-up
+    )
+
+    entry fam-blank (
+        sequence: 90
+        display:
+            ```
+            
+            Blank
+            ```
+        return: fam-blank
+    )
+
+    entry fam-check (
+        sequence: 100
+        display:
+            ```
+            
+            Check
+            ```
+        return: fam-check
+    )
+
+    entry fam-circle (
+        sequence: 110
+        display:
+            ```
+            
+            Circle
+            ```
+        return: fam-circle
+    )
+
+    entry fam-clock (
+        sequence: 120
+        display:
+            ```
+            
+            Clock
+            ```
+        return: fam-clock
+    )
+
+    entry fam-ellipsis-h (
+        sequence: 130
+        display:
+            ```
+            
+            Ellipsis H
+            ```
+        return: fam-ellipsis-h
+    )
+
+    entry fam-ellipsis-v (
+        sequence: 140
+        display:
+            ```
+            
+            Ellipsis V
+            ```
+        return: fam-ellipsis-v
+    )
+
+    entry fam-heart (
+        sequence: 150
+        display:
+            ```
+            
+            Heart
+            ```
+        return: fam-heart
+    )
+
+    entry fam-information (
+        sequence: 160
+        display:
+            ```
+            
+            Information
+            ```
+        return: fam-information
+    )
+
+    entry fam-minus (
+        sequence: 170
+        display:
+            ```
+            
+            Minus
+            ```
+        return: fam-minus
+    )
+
+    entry fam-pause (
+        sequence: 180
+        display:
+            ```
+            
+            Pause
+            ```
+        return: fam-pause
+    )
+
+    entry fam-play (
+        sequence: 190
+        display:
+            ```
+            
+            Play
+            ```
+        return: fam-play
+    )
+
+    entry fam-plus (
+        sequence: 200
+        display:
+            ```
+            
+            Plus
+            ```
+        return: fam-plus
+    )
+
+    entry fam-sleep (
+        sequence: 210
+        display:
+            ```
+            
+            Sleep
+            ```
+        return: fam-sleep
+    )
+
+    entry fam-star (
+        sequence: 220
+        display:
+            ```
+            
+            Star
+            ```
+        return: fam-star
+    )
+
+    entry fam-stop (
+        sequence: 230
+        display:
+            ```
+            
+            Stop
+            ```
+        return: fam-stop
+    )
+
+    entry fam-warning (
+        sequence: 240
+        display:
+            ```
+            
+            Warning
+            ```
+        return: fam-warning
+    )
+
+    entry fam-x (
+        sequence: 250
+        display:
+            ```
+            
+            X
+            ```
+        return: fam-x
+    )
+
+)
+
+lov p4000-modifier-status (
+    name: P4000_MODIFIER_STATUS
+    source {
+        location: staticValues
+    }
+
+    entry fam-is-danger (
+        sequence: 30
+        display:
+            ```
+            
+            Danger
+            ```
+        return: fam-is-danger
+    )
+
+    entry fam-is-disabled (
+        sequence: 50
+        display:
+            ```
+            
+            Disabled
+            ```
+        return: fam-is-disabled
+    )
+
+    entry fam-is-info (
+        sequence: 40
+        display:
+            ```
+            
+            Info
+            ```
+        return: fam-is-info
+    )
+
+    entry fam-is-success (
+        sequence: 10
+        display:
+            ```
+            
+            Success
+            ```
+        return: fam-is-success
+    )
+
+    entry fam-is-warning (
+        sequence: 20
+        display:
+            ```
+            
+            Warning
+            ```
+        return: fam-is-warning
+    )
+
+)
+
+lov p4000-rotate (
+    name: P4000_ROTATE
+    source {
+        location: staticValues
+    }
+
+    entry fa-flip-horizontal (
+        sequence: 10
+        display: Flip Horizontal
+        return: fa-flip-horizontal
+    )
+
+    entry fa-flip-vertical (
+        sequence: 20
+        display: Flip Vertical
+        return: fa-flip-vertical
+    )
+
+    entry fa-rotate-180 (
+        sequence: 30
+        display: Rotate 180
+        return: fa-rotate-180
+    )
+
+    entry fa-rotate-270 (
+        sequence: 40
+        display: Rotate 270
+        return: fa-rotate-270
+    )
+
+    entry fa-rotate-90 (
+        sequence: 50
+        display: Rotate 90
+        return: fa-rotate-90
+    )
+
+)
+
+lov p6100-button-set (
+    name: P6100_BUTTON_SET
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 10
+        display: Default
+        return: default
+    )
+
+    entry t-button-pill (
+        sequence: 30
+        display: Inner Button
+        return: t-Button--pill
+    )
+
+    entry t-button-pillend (
+        sequence: 40
+        display: Last Button
+        return: t-Button--pillEnd
+    )
+
+    entry t-button-pillstart (
+        sequence: 20
+        display: First Button
+        return: t-Button--pillStart
+    )
+
+)
+
+lov p6100-button-template (
+    name: P6100_BUTTON_TEMPLATE
+    source {
+        location: staticValues
+    }
+
+    entry icon-only (
+        sequence: 30
+        display: Icon
+        return: ICON_ONLY
+    )
+
+    entry text-only (
+        sequence: 10
+        display: Text
+        return: TEXT_ONLY
+    )
+
+    entry text-w-icon (
+        sequence: 20
+        display: Text with Icon
+        return: TEXT_W_ICON
+    )
+
+)
+
+lov p6100-hot (
+    name: P6100_HOT
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 20
+        display: No
+        return: default
+    )
+
+    entry t-button-hot (
+        sequence: 10
+        display: Yes
+        return: t-Button--hot
+    )
+
+)
+
+lov p6100-icon-position (
+    name: P6100_ICON_POSITION
+    source {
+        location: staticValues
+    }
+
+    entry t-button-iconleft (
+        sequence: 10
+        display: Left
+        return: t-Button--iconLeft
+    )
+
+    entry t-button-iconright (
+        sequence: 20
+        display: Right
+        return: t-Button--iconRight
+    )
+
+)
+
+lov p6100-size (
+    name: P6100_SIZE
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 30
+        display: Default
+        return: default
+    )
+
+    entry t-button-large (
+        sequence: 40
+        display: Large
+        return: t-Button--large
+    )
+
+    entry t-button-small (
+        sequence: 20
+        display: Small
+        return: t-Button--small
+    )
+
+    entry t-button-tiny (
+        sequence: 10
+        display: Tiny
+        return: t-Button--tiny
+    )
+
+)
+
+lov p6100-spacing-bottom (
+    name: P6100_SPACING_BOTTOM
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 20
+        display: Default
+        return: default
+    )
+
+    entry t-button-gapbottom (
+        sequence: 30
+        display: Large
+        return: t-Button--gapBottom
+    )
+
+    entry t-button-padbottom (
+        sequence: 10
+        display: Small
+        return: t-Button--padBottom
+    )
+
+)
+
+lov p6100-spacing-left (
+    name: P6100_SPACING_LEFT
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 20
+        display: Default
+        return: default
+    )
+
+    entry t-button-gapleft (
+        sequence: 30
+        display: Large
+        return: t-Button--gapLeft
+    )
+
+    entry t-button-padleft (
+        sequence: 10
+        display: Small
+        return: t-Button--padleft
+    )
+
+)
+
+lov p6100-spacing-right (
+    name: P6100_SPACING_RIGHT
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 20
+        display: Default
+        return: default
+    )
+
+    entry t-button-gapright (
+        sequence: 30
+        display: Large
+        return: t-Button--gapRight
+    )
+
+    entry t-button-padright (
+        sequence: 10
+        display: Small
+        return: t-Button--padRight
+    )
+
+)
+
+lov p6100-spacing-top (
+    name: P6100_SPACING_TOP
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 20
+        display: Default
+        return: default
+    )
+
+    entry t-button-gaptop (
+        sequence: 30
+        display: Large
+        return: t-Button--gapTop
+    )
+
+    entry t-button-padtop (
+        sequence: 10
+        display: Small
+        return: t-Button--padTop
+    )
+
+)
+
+lov p6100-style (
+    name: P6100_STYLE
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 10
+        display: Default
+        return: default
+    )
+
+    entry t-button-link (
+        sequence: 40
+        display: Display as Link
+        return: t-Button--link
+    )
+
+    entry t-button-noui (
+        sequence: 30
+        display: Remove UI Decorations
+        return: t-Button--noUI
+    )
+
+    entry t-button-simple (
+        sequence: 20
+        display: Simple
+        return: t-Button--simple
+    )
+
+)
+
+lov p6100-type (
+    name: P6100_TYPE
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 10
+        display: Normal
+        return: default
+    )
+
+    entry t-button-danger (
+        sequence: 40
+        display: Danger
+        return: t-Button--danger
+    )
+
+    entry t-button-primary (
+        sequence: 20
+        display: Primary
+        return: t-Button--primary
+    )
+
+    entry t-button-success (
+        sequence: 50
+        display: Success
+        return: t-Button--success
+    )
+
+    entry t-button-warning (
+        sequence: 30
+        display: Warning
+        return: t-Button--warning
+    )
+
+)
+
+lov remember-username (
+    name: REMEMBER_USERNAME
+    source {
+        location: staticValues
+    }
+
+    entry y (
+        sequence: 10
+        display: Remember username
+        return: Y
+    )
+
+)
+
+lov static-default-strecth (
+    name: STATIC_DEFAULT_STRECTH
+    source {
+        location: staticValues
+    }
+
+    entry default (
+        sequence: 10
+        display: Auto - Default
+        return: default
+    )
+
+    entry t-button-stretch (
+        sequence: 20
+        display: Stretch
+        return: t-Button--stretch
+    )
+
+)
+
 lov static-display-retun-1-4 (
     name: STATIC_DISPLAY_RETUN_1_4
     source {
@@ -134,6 +960,52 @@ lov static-fruits (
         sequence: 50
         display: Watermelon
         return: WATERMELON
+    )
+
+)
+
+lov static-option-a-c (
+    name: STATIC_OPTION_A_C
+    source {
+        location: staticValues
+    }
+
+    entry a (
+        sequence: 10
+        display: Option A
+        return: A
+    )
+
+    entry b (
+        sequence: 20
+        display: Option B
+        return: B
+    )
+
+    entry c (
+        sequence: 30
+        display: Option C
+        return: C
+    )
+
+)
+
+lov static-small-large (
+    name: STATIC_SMALL_LARGE
+    source {
+        location: staticValues
+    }
+
+    entry large (
+        sequence: 20
+        display: Large
+        return: LARGE
+    )
+
+    entry small (
+        sequence: 10
+        display: Small
+        return: SMALL
     )
 
 )

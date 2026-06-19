@@ -4,7 +4,7 @@ app CUSTOM-UT (
     group: @universal-theme
     logo {
         type: text
-        text: Universal Theme
+        text: Custom Universal Theme
     }
     navigation {
         homeUrl: {

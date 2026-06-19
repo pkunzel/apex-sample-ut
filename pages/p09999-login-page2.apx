@@ -90,8 +90,8 @@ page 9999 (
             alignment: left
         }
         lov {
-            type: staticValues
-            staticValues: STATIC:Remember username;Y
+            type: sharedComponent
+            lov: @remember-username
             displayExtraValues: false
         }
         layout {
